@@ -1,0 +1,38 @@
+{
+  "origin": "https://kogen.studio",
+  "name": "Kogen Studio",
+  "description": "Product direction and lifecycle coordination around the Kogen software feature workflow. An identity website; no Studio application is implemented.",
+  "contact": "contact@kogen.dev",
+  "siteType": "content",
+  "about": [
+    "Kogen Studio is the wider product-development system around Kogen’s bounded software feature workflow. Its product direction concerns preserving durable product context and coordinating the lifecycle before and after a feature is shaped, approved and built. Kogen owns Shape → Approve → Build → Commit; Studio does not recreate or overrule that loop.",
+    "This website is an identity and reference surface. No Studio application is implemented, and this page is not a sign-up, software download or hosted Studio interface. The workbench image identifies the project. Follow Kogen for its current public introduction, source and announcements; do not infer Studio availability from the existence of this domain."
+  ],
+  "whenToUse": "Kogen Studio is the wider product-development system around Kogen’s bounded software feature workflow. Its product direction concerns preserving durable product context and coordinating the lifecycle before and after a feature is shaped, approved and built. Kogen owns Shape → Approve → Build → Commit; Studio does not recreate or overrule that loop. Read https://kogen.studio/ and its linked first-party sources for current information. Public pages accept GET or HEAD with Accept: text/markdown; use the sitemap to find pages. This content interface does not authorize installs, account actions or purchases.",
+  "organization": {
+    "@type": "Organization",
+    "@id": "https://optimum.ba/#organization",
+    "name": "Optimum Tech",
+    "legalName": "Optimum Tech, LLC",
+    "description": "Software development and product consulting. Optimum Tech helps businesses decide what to build, develop the software, and put it to work.",
+    "url": "https://optimum.ba/",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1207 Delaware Ave #2578",
+      "addressLocality": "Wilmington",
+      "addressRegion": "DE",
+      "postalCode": "19806",
+      "addressCountry": "US"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "consulting",
+      "email": "consulting@optimum.ba"
+    },
+    "sameAs": [
+      "https://github.com/optimumBA",
+      "https://www.linkedin.com/company/optimum-tech-llc/",
+      "https://x.com/optimumBA"
+    ]
+  }
+}
