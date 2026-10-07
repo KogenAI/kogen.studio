@@ -1,2 +1,12 @@
-<nav aria-label="Site information" class="site-information"><a href="/about/">About</a><a href="/contact/">Contact</a><a href="/privacy/">Privacy</a><a href="/llms.txt">Agent guide</a></nav>
-<style>.site-information{display:flex;flex-wrap:wrap;justify-content:center;gap:1.25rem;padding:1.5rem;font:14px/1.5 system-ui,sans-serif}</style>
+<footer>
+  <nav aria-label="Site information">
+    <a href="/about/" aria-current={Astro.url.pathname === '/about/' ? 'page' : undefined}>About</a>
+    <a href="/contact/" aria-current={Astro.url.pathname === '/contact/' ? 'page' : undefined}>Contact</a>
+    <a href="/privacy/" aria-current={Astro.url.pathname === '/privacy/' ? 'page' : undefined}>Privacy</a>
+  </nav>
+</footer>
+<style>
+  footer { padding: 8px 24px 24px; }
+  nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 12px; }
+  a[aria-current="page"] { color: #171717; text-decoration: underline; text-underline-offset: 4px; }
+</style>

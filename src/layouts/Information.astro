@@ -1,8 +1,26 @@
 ---
-import site from '../../agent-site.json';
-import AgentMetadata from '../components/AgentMetadata.astro';
-const {title, description} = Astro.props;
-const canonical = new URL(Astro.url.pathname, site.origin).href;
+import { Image } from 'astro:assets';
+import Page from './Page.astro';
+import workbench from '../assets/workbench.png';
+const { title, description } = Astro.props;
 ---
-<!doctype html><html lang="en"><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" /><title>{title} — {site.name}</title><meta name="description" content={description} /><link rel="canonical" href={canonical} /><meta property="og:type" content="website" /><meta property="og:title" content={`${title} — ${site.name}`} /><meta property="og:description" content={description} /><meta property="og:url" content={canonical} /><AgentMetadata /></head><body><nav><a href="/">{site.name}</a> · <a href="/about/">About</a> · <a href="/contact/">Contact</a> · <a href="/privacy/">Privacy</a></nav><main><h1>{title}</h1><slot /></main><footer><a href="/llms.txt">Agent guide</a> · <a href="/sitemap.xml">Sitemap</a></footer></body></html>
-<style>body{max-width:760px;margin:0 auto;padding:40px 24px;color:#172b3a;background:#fff;font:18px/1.65 system-ui,sans-serif}h1{font-size:2.4rem;line-height:1.2}a{color:#254fbc}nav,footer{font-size:15px}main{margin:48px 0}footer{border-top:1px solid #ddd;padding-top:20px}</style>
+<Page title={`${title} — Kogen Studio`} description={description} analytics={false}>
+  <header>
+    <a href="/" aria-label="Kogen Studio home"><Image src={workbench} alt="Kogen Studio" width={320} format="webp" /></a>
+  </header>
+  <main class="information">
+    <h1>{title}</h1>
+    <slot />
+  </main>
+</Page>
+<style>
+  header { max-width: 680px; width: 100%; margin: 0 auto; padding: 36px 24px 0; }
+  header a { display: inline-block; padding: 0; }
+  header img { display: block; width: 160px; height: auto; }
+  .information { display: block; width: 100%; max-width: 680px; margin: 0 auto; padding: 24px 24px 56px; font-size: 17px; line-height: 1.65; }
+  h1 { font-size: 32px; line-height: 1.2; font-weight: 400; margin: 0 0 28px; }
+  .information :global(h2) { font-size: 21px; line-height: 1.35; font-weight: 400; margin: 32px 0 12px; }
+  .information :global(p) { margin: 0 0 20px; }
+  .information :global(a) { display: inline; padding: 0; min-height: 0; font-size: inherit; line-height: inherit; letter-spacing: normal; text-decoration: underline; text-underline-offset: 4px; overflow-wrap: anywhere; }
+  @media (max-width: 480px) { header { padding-top: 24px; } h1 { font-size: 28px; } }
+</style>
